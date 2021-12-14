@@ -47,4 +47,5 @@ int main() {
 	std::cout << bimage(2, 2) << " pixel (2, 2) = False" << "\n";
 	std::cout << image(0, 0);
 	std::cout << "\n" << image;
+	std::cout << endl << bimage.ratio();
 }

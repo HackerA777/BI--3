@@ -288,9 +288,9 @@ ostream& operator <<(ostream& os, const binaryimage<T, True, False>& a_image) {
 template <typename T, T True, T False>
 double binaryimage<T, True, False>::ratio() {
 	double temp = 0, d_width = width, d_height = height;
-	for (int i = 0; i < width; ++i) {
-		for (int j = 0; j < height; ++j) {
-			if (image[i][j])
+	for (auto i : image) {
+		for (auto j : i) {
+			if (j == True)
 				temp++;
 		}
 	}
